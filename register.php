@@ -24,7 +24,7 @@ body{
 }
 </style>
 </head>
-<?php $title="Bloodbank | Register"; ?>
+<?php $title="Blood Donation Platform | Register"; ?>
 <?php require 'head.php'; ?>
 <body>
   <?php include 'header.php'; ?>
@@ -41,7 +41,7 @@ body{
                 <a class="nav-link active" data-toggle="tab" href="#hospitals">Hospitals</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" data-toggle="tab" href="#receivers">User</a>
+                <a class="nav-link" data-toggle="tab" href="#receivers">Donor or Requester</a>
               </li>
             </ul>
 
@@ -51,8 +51,9 @@ body{
 
         <form action="file/hospitalReg.php" method="post" enctype="multipart/form-data">
           <input type="text" name="hname" placeholder="Hospital Name" class="form-control mb-3" required>
-          <input type="text" name="hcity" placeholder="Hospital City" class="form-control mb-3" required>
-          <input type="tel" name="hphone" placeholder="Hospital Phone Number" class="form-control mb-3" required pattern="[0,6-9]{1}[0-9]{9,11}" title="Password must have start from 0,6,7,8 or 9 and must have 10 to 12 digit">
+          <input type="text" name="hcity" placeholder="Hospital State or City" class="form-control mb-3" required>
+          <input type="tel" name="rphone" placeholder="Phone Number" class="form-control mb-3" required pattern="^(\+234|0)[0-9]{10}$" title="Enter a valid Nigerian phone number">
+          
           <input type="email" name="hemail" placeholder="Hospital Email" class="form-control mb-3" required>
           <input type="password" name="hpassword" placeholder="Hospital Password" class="form-control mb-3" required minlength="6">
           <input type="submit" name="hregister" value="Register" class="btn btn-primary btn-block mb-4">
@@ -64,7 +65,7 @@ body{
        <div class="tab-pane container fade" id="receivers">
 
          <form action="file/receiverReg.php" method="post" enctype="multipart/form-data">
-          <input type="text" name="rname" placeholder="User Name" class="form-control mb-3" required>
+          <input type="text" name="rname" placeholder="Donor or Requester Name" class="form-control mb-3" required>
           <select name="rbg" class="form-control mb-3" required>
                 <option disabled="" selected="">Blood Group</option>
                 <option value="A+">A+</option>
@@ -76,8 +77,8 @@ body{
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
           </select>
-          <input type="text" name="rcity" placeholder="User City" class="form-control mb-3" required>
-          <input type="tel" name="rphone" placeholder="User Phone Number" class="form-control mb-3" required pattern="[0,6-9]{1}[0-9]{9,11}" title="Password must have start from 0,6,7,8 or 9 and must have 10 to 12 digit">
+          <input type="text" name="rcity" placeholder="State or City" class="form-control mb-3" required>
+          <input type="tel" name="rphone" placeholder="Phone Number" class="form-control mb-3" required pattern="[0,6-9]{1}[0-9]{9,11}" title="Password must have start from 0,6,7,8 or 9 and must have 10 to 12 digit">
           <input type="email" name="remail" placeholder="User Email" class="form-control mb-3" required>
           <input type="password" name="rpassword" placeholder="User Password" class="form-control mb-3" required minlength="6">
           <input type="submit" name="rregister" value="Register" class="btn btn-primary btn-block mb-4">

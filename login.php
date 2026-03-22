@@ -24,7 +24,7 @@ if (isset($_SESSION['hid'])) {
 }
 </style>
 </head>
-<?php $title="Bloodbank | Login"; ?>
+<?php $title="Blood Donation Platform | Login"; ?>
 <?php require 'head.php'; ?>
 <body>
   <?php require 'header.php'; ?>
@@ -39,10 +39,10 @@ if (isset($_SESSION['hid'])) {
           <div class="card rounded">
             <ul class="nav nav-tabs justify-content-center bg-light" style="padding: 20px;">
       <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" href="#hospitals">Hospitals</a>
+        a class="nav-link active" data-toggle="tab" href="#hospitals">Hospital Login</a>
       </li>
      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" href="#receivers">User</a>
+        <a class="nav-link" data-toggle="tab" href="#receivers">Donor or Requester</a>
      </li>
     </ul>
 
@@ -60,9 +60,9 @@ if (isset($_SESSION['hid'])) {
 
       <div class="tab-pane container fade" id="receivers">
          <form action="file/receiverLogin.php" class="login-form" method="post">
-          <label class="text-muted font-weight-bold" class="text-muted font-weight-bold">User Email</label>
+          <label class="text-muted font-weight-bold" class="text-muted font-weight-bold">Donor or Requester Email</label>
           <input type="email" name="remail" placeholder="User Email" class="form-control mb-4">
-          <label class="text-muted font-weight-bold" class="text-muted font-weight-bold">User Password</label>
+          <label class="text-muted font-weight-bold" class="text-muted font-weight-bold">Donor or Requester Password</label>
           <input type="password" name="rpassword" placeholder="User Password" class="form-control mb-4">
           <input type="submit" name="rlogin" value="Login" class="btn btn-primary btn-block mb-4">
         </form>
